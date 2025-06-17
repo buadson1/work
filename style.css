@@ -68,35 +68,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* Slideshow */
-.slideshow {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 24px;
-  box-shadow: 0 4px 24px rgba(0,47,255,0.08);
-}
-
-.slideshow img {
-  object-fit: cover;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-}
-
-.slideshow img.active {
-  display: block;
-  opacity: 1;
-  z-index: 1;
-}
-
 /* 作業按鈕 */
 .game-button {
   display: block;
@@ -132,7 +103,8 @@ p {
     padding: 10px 8px;
     font-size: 1rem;
   }
-  .slideshow {
-    height: 180px;
+  .multiplication-table {
+    font-size: 0.95rem;
+    max-width: 98vw;
   }
 }
