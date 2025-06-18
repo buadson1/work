@@ -153,3 +153,41 @@ resetBtn.addEventListener('click', () => {
 
 updatePokedex();
 loadCollection();
+
+// 點擊圖鑑圖片放大
+pokedexGrid.addEventListener('click', function(e) {
+  if (e.target.tagName === 'IMG' && !e.target.src.includes('question.png')) {
+    showImageModal(e.target.src);
+  }
+});
+
+function showImageModal(src) {
+  // 建立遮罩
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.left = 0;
+  overlay.style.top = 0;
+  overlay.style.width = '100vw';
+  overlay.style.height = '100vh';
+  overlay.style.background = 'rgba(0,0,0,0.7)';
+  overlay.style.display = 'flex';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.zIndex = 99999;
+
+  // 建立大圖
+  const img = document.createElement('img');
+  img.src = src;
+  img.style.maxWidth = '80vw';
+  img.style.maxHeight = '80vh';
+  img.style.borderRadius = '16px';
+  img.style.boxShadow = '0 4px 32px rgba(0,0,0,0.5)';
+  img.style.background = '#fff';
+
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  // 點擊遮罩或圖片都可關閉
+  overlay.addEventListener('click', () => overlay.remove());
+  img.addEventListener('click', e => e.stopPropagation());
+}
