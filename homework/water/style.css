@@ -22,6 +22,8 @@ nav {
   padding: 16px 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   margin-bottom: 32px;
+  width: 100vw;
+  min-width: 320px;
 }
 
 nav a {
@@ -150,6 +152,10 @@ p {
   .container {
     padding: 18px 6px;
     max-width: 98vw;
+  }
+  nav {
+    padding: 10px 0;
+    margin-bottom: 18px;
   }
   nav a {
     margin: 0 4px;

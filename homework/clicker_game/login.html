@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>小松模擬器 遊戲介紹</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .intro-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 36px 28px;
+      text-align: center;
+    }
+    .intro-container h1 {
+      color: #002fff;
+      margin-bottom: 18px;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    .intro-container p {
+      color: #444;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+    .intro-container code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 1em;
+      color: #0055ff;
+    }
+    .intro-container .tip {
+      color: #f44336;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+    .intro-container a {
+      color: #0055ff;
+      text-decoration: underline;
+    }
+    /* 導覽列 */
+    nav {
+      background: linear-gradient(90deg, #002fff 0%, #0055ff 100%);
+      text-align: center;
+      padding: 16px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 18px;
+      padding: 12px 22px;
+      border: 2px solid #ffd700;
+      border-radius: 10px;
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      background: rgba(255,255,255,0.05);
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    nav a:hover, nav a.active {
+      background: #ffd700;
+      color: #002fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <a href="../../index.html">首頁</a>
+        <a href="../../about.html">關於我</a>
+        <a href="../../research.html">興趣</a>
+        <a href="../../homework.html">作業</a>
+    </nav>
+  <div class="intro-container">
+    <h1>小松模擬器 遊戲介紹</h1>
+    <p>
+      這是一個簡單的點擊抽卡遊戲，靈感來自於「小松模擬器」。你可以點擊畫面上的圖片來抽取不同稀有度的角色，並在左側圖鑑中收集你的成果。
+    </p>
+    <p>
+      <strong>原始版本</strong>是使用 <code>Flask</code>（Python 網頁框架）開發，並搭配伺服器端資料庫來儲存玩家的收集紀錄。
+    </p>
+    <p>
+      <strong>目前這個版本</strong>為了能夠部署在 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>，已經改為純前端 HTML、CSS、JavaScript，所有資料都儲存在瀏覽器的 <code>localStorage</code>，<span style="color:#f44336;">無法連接資料庫或伺服器</span>，也無法跨裝置同步你的收集進度。
+    </p>
+    <p>
+      你可以在 <a href="https://github.com/buadson1/clicker_game/tree/main/clicker_game" target="_blank">GitHub 專案頁面</a> 查看本遊戲的原始碼與專案說明，歡迎參考與學習！
+    </p>
+    <p>
+      如果你重新整理或清除瀏覽器資料，圖鑑會被重置。<br>
+      若想體驗伺服器版本，請於本地端自行架設 Flask 環境。
+    </p>
+    <div class="tip">
+      ※ 本遊戲適合部署於 GitHub Pages 或任何靜態網頁空間。
+    </div>
+    <p style="margin-top:28px;">
+      <a href="index.html">開始遊戲</a>
+    </p>
+  </div>
+</body>
+</html>
